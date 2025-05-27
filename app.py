@@ -16,7 +16,7 @@ def get_recommendations(region='', festival='', tradition='', cosine_sim=cosine_
     mask = (
         (df['Region'].str.contains(region, case=False, na=False) if region else True) &
         (df['Festival'].str.contains(festival, case=False, na=False) if festival else True) &
-        (df['Tradition'].str.contains(tradition, case=False, na=False) if tradition else True)
+        (df['Tradition'].str.contains(tradition, case=False, na=False) if tradition else True)  
     )
     filtered_df = df[mask]
     
